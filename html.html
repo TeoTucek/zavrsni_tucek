@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribolovni Klub</title>
+    
+    <!-- Povezivanje s CSS datotekom -->
+    <link rel="stylesheet" href="css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>Dobrodošli u Ribolovni Klub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="file:///E:/TeoTu%C4%8Dek/stranica2.html">Članovi</a></li>
+            <li><a href="#ulovi">Ulovljene Ribe</a></li>
+            <li><a href="#dodaj">Dodaj Novi Ulov</a></li>
+        </ul>
+    </nav>
+    
+    <section id="clanovi">
+        <h2>Naši Članovi</h2>
+        
+    
+        
+        <!-- Dugme za prijavu koje pokreće modal -->
+       
+    </section>
+    
+    <section id="ulovi">
+        <h2>Ulovljene Ribe</h2>
+        <div id="lista-ulova"></div>
+    </section>
+    
+    <section id="dodaj">
+        <h2>Dodaj Novi Ulov</h2>
+        <form id="ulov-form">
+            <label for="ime">Ime Ribiča:</label>
+            <input type="text" id="ime" name="ime" required>
+            <label for="riba">Vrsta Ribe:</label>
+            <input type="text" id="riba" name="riba" required>
+            <label for="tezina">Težina (kg):</label>
+            <input type="number" id="tezina" name="tezina" step="0.01" required>
+            <button type="submit">Dodaj</button>
+        </form>
+    </section>
+    
+    
+              <form>
+                  <div class="mb-3">
+                    <label for="exampleInputime1" class="form-label">Korisničko ime</label>
+                    <input type="ime" class="form-control" id="exampleInputime1" aria-describedby="imeHelp">
+                    <div id="imeHelp" class="form-text">Nikada ne dijelimo tvoje podatke.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Lozinka</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Zapamti me</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Prijavi se</button>
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+            <button type="button" class="btn btn-primary">Pohrani promjene</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Skripta -->
+    <script src="script.js"></script>
+</body>
+</html>
