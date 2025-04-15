@@ -59,6 +59,8 @@
 <!-- Dugme za otvaranje modala -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Dodaj novog člana
+  
+
 </button>
 
 <!-- Modal -->
@@ -71,36 +73,33 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
       </div>
       
-      <div class="modal-body">
-        <!-- Forma unutar modala -->
-        <form id="noviClanForm">
-          <div class="mb-3">
-            <label for="ime" class="form-label">Ime</label>
-            <input type="text" class="form-control" id="ime">
-          </div>
-          <div class="mb-3">
-            <label for="prezime" class="form-label">Prezime</label>
-            <input type="text" class="form-control" id="prezime">
-          </div>
-          <div class="mb-3">
-            <label for="jmbg" class="form-label">JMBG</label>
-            <input type="text" class="form-control" id="jmbg">
-          </div>
-          <div class="mb-3">
-            <label for="adresa" class="form-label">Adresa</label>
-            <input type="text" class="form-control" id="adresa">
-          </div>
-          <div class="mb-3">
-            <label for="telefon" class="form-label">Telefon</label>
-            <input type="text" class="form-control" id="telefon">
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="godisnjaUlaznica">
-            <label class="form-check-label" for="godisnjaUlaznica">Godišnja ulaznica</label>
-          </div>
-        </form>
-      </div>
-      
+      <form id="noviClanForm" method="post" action="dodaj_clana.php">
+  <div class="mb-3">
+    <label for="ime" class="form-label">Ime</label>
+    <input type="text" class="form-control" id="ime" name="ime" required>
+  </div>
+  <div class="mb-3">
+    <label for="prezime" class="form-label">Prezime</label>
+    <input type="text" class="form-control" id="prezime" name="prezime" required>
+  </div>
+  <div class="mb-3">
+    <label for="jmbg" class="form-label">JMBG</label>
+    <input type="text" class="form-control" id="jmbg" name="jmbg" required>
+  </div>
+  <div class="mb-3">
+    <label for="adresa" class="form-label">Adresa</label>
+    <input type="text" class="form-control" id="adresa" name="adresa" required>
+  </div>
+  <div class="mb-3">
+    <label for="telefon" class="form-label">Telefon</label>
+    <input type="text" class="form-control" id="telefon" name="telefon" required>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="godisnjaUlaznica" name="godisnja_ulaznica" value="1">
+    <label class="form-check-label" for="godisnjaUlaznica">Godišnja ulaznica</label>
+  </div>
+</form>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
         <button type="submit" class="btn btn-primary" form="noviClanForm" id="unesiClana">Pošalji</button>
@@ -128,7 +127,7 @@ document.getElementById("unesiClana").addEventListener("click", function() {
       location.reload();
     }
   };
-  xhr.send("ime=" + ime + "&prezime=" + prezime + "&jmbg=" + jmbg + "&adresa=" + adresa + "&telefon=" + telefon + "&godisnjaUlaznica=" + godisnjaUlaznica);
+  xhr.send("ime=" + ime + "&prezime=" + prezime + "&jmbg=" + jmbg + "&adresa=" + adresa + "&telefon=" + telefon + "&godisnja_ulaznica=" + godisnjaUlaznica);
 });
 </script>
 

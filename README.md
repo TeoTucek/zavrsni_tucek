@@ -1,1 +1,0 @@
-# zavrsni_tucek

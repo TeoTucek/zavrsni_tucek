@@ -11,6 +11,6 @@ $db = mysqli_connect($server, $username, $password, $database);
 if (!$db) {
     die("Greška pri povezivanju s bazom: " . mysqli_connect_error());
 } else {
-    echo "Uspješno povezano s bazom!"; // Privremeno, možeš kasnije obrisati ovu liniju
+    echo "Uspješno povezano s bazom!"; 
 }
 ?>
